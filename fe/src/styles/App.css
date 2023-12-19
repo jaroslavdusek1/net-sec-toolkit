@@ -1,0 +1,439 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  /* color: whitesmoke; */
+}
+
+body {
+  margin: 0;
+  background: url('../../public/desktop-v4.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Navbar */
+.container {
+  background-color: rgba(51, 51, 51, 0.40);
+  text-align: center;
+  padding: 2rem;
+}
+
+.container h2 {
+  color: rgba(235, 227, 219, 0.80);
+}
+
+.container p {
+  text-align: left;
+  color: rgba(235, 227, 219, 0.80);
+}
+
+.site-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.nav {
+  background-color: rgba(51, 51, 51, 0.40);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: rgba(235, 227, 219, 0.80);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav li.active {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.nav li:hover {
+  background-color: #444;
+  border-radius: 4px;
+}
+
+.site-logo {
+  height: 5rem;
+  width: auto;
+  margin: 1rem;
+}
+
+.site-logo:hover {
+  animation: shake 0.5s infinite;
+}
+
+.server-status {
+  margin-left: 2rem;
+  color: rgba(235, 227, 219, 0.80);
+}
+
+/* Main icon shake effect */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-3px);
+  }
+
+  50% {
+    transform: translateX(3px);
+  }
+
+  75% {
+    transform: translateX(-3px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Switch button */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  background-color: rgba(51, 51, 51, 0.40);
+  border-radius: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Styling for the slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #696969;
+  transition: .4s;
+  border: 1px solid #555;
+  box-shadow: inset 0 0 1px #000000;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #b2b2b2;
+  transition: .4s;
+  box-shadow: inset 0 0 1px #000000;
+}
+
+/* Styles for the switch when it is in the active (on) state */
+input:checked+.slider {
+  background-color: #006400;
+  animation: shakeAndTilt 2s infinite alternate;
+}
+
+input:checked+.slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded edges for the slider */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Keyframes pro combined shake a tilt effect */
+@keyframes shakeAndTilt {
+
+  0%,
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+
+  10% {
+    transform: translateX(-1px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translateX(1px) rotate(1deg);
+  }
+
+  30% {
+    transform: translateX(-1px) rotate(0);
+  }
+
+  40% {
+    transform: translateX(1px) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateX(-1px) rotate(1deg);
+  }
+
+  60% {
+    transform: translateX(1px) rotate(0);
+  }
+
+  70% {
+    transform: translateX(-1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translateX(1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+/* Sparks */
+@keyframes spark-up {
+  0% {
+    opacity: 0.8;
+    transform: translate(0, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(20px, -20px);
+  }
+}
+
+@keyframes spark-down {
+  0% {
+    opacity: 0.8;
+    transform: translate(0, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(20px, 20px);
+  }
+}
+
+.sparks {
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.spark-up,
+.spark-down {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: green;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.spark-up {
+  animation: spark-up 0.7s ease-out infinite alternate;
+}
+
+.spark-down {
+  animation: spark-down 0.7s ease-out infinite alternate;
+}
+
+/* Sparks in the switch "checked" state */
+.switch input:checked~.sparks .spark-up,
+.switch input:checked~.sparks .spark-down {
+  opacity: 1;
+}
+
+/* Sparks in the switch "unchecked" state */
+.switch input:not(:checked)~.sparks .spark-up,
+.switch input:not(:checked)~.sparks .spark-down {
+  opacity: 0;
+  animation: none;
+}
+
+
+/* Sparks, Switch End */
+
+/* Terminal */
+.terminal {
+  height: 1000px;
+  overflow-y: auto;
+  background-color: #3C3C3C;
+  /* color: #C4C4C4; */
+  color: green !important;
+  padding: 35px 45px;
+  font-size: 12px;
+  line-height: 1.42;
+  font-family: 'IBM Plex Mono', Consolas, Menlo, Monaco, 'Courier New', Courier,
+    monospace;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.terminal__line {
+  line-height: 2;
+  white-space: pre-wrap;
+}
+
+.terminal__prompt {
+  display: flex;
+  align-items: center;
+}
+
+.terminal__prompt__label {
+  flex: 0 0 auto;
+  color: #F9EF00;
+}
+
+.terminal__prompt__input {
+  flex: 1;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  /* color: white; */
+  color: white;
+}
+
+.terminal__prompt__input input {
+  flex: 1;
+  width: 100%;
+  background-color: transparent;
+  color: green !important;
+  border: 0;
+  outline: none;
+  font-size: 12px;
+  line-height: 1.42;
+  font-family: 'IBM Plex Mono', Consolas, Menlo, Monaco, 'Courier New', Courier,
+    monospace;
+}
+
+/* input line */
+.terminal input[name="react-console-emulator__input"] {
+  color: green !important;
+}
+
+/* terminal cursor */
+.terminal span[name="react-console-emulator__promptLabel"] {
+  color: green !important;
+}
+
+/* terminal div */
+div[name="react-console-emulator"] {
+  min-height: 850px !important;
+}
+
+/* terminal output */
+div[name="react-console-emulator__content"]>div {
+  color: green !important;
+}
+
+/* Terminal End */
+
+/* bruteARP */
+.spoof-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.spoof-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  font-size: 16px;
+  padding: 15px 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.spoof-button:hover {
+  background-color: #555;
+}
+
+/* bruteARP End */
+
+/* Top */
+.table-full-width {
+  width: 100% !important;
+  border-collapse: collapse;
+}
+
+/* output */
+.table-full-width th,
+.table-full-width td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+/* Top End */
+
+/* Modal Alert */
+.win95-modal {
+  position: fixed;
+  /* Sit on top */
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: rgba(51, 51, 51);
+  border: 1px solid #888;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.win95-modal-titlebar {
+  background-color: #065306;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.win95-modal-body {
+  padding: 10px;
+}
+
+.close-button {
+  border: none;
+  padding: 0 6px;
+}
+
+/* Modal Alert End */
+
+/* Quote */
+.quote {
+  color: #808080;
+  margin-left: 2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Quote End */
