@@ -1,0 +1,12 @@
+jane
+tom
+password
+dog
+cat
+test
+pass
+qwerty
+qwertz
+foolvictim1
+test
+victim123

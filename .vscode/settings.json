@@ -1,0 +1,10 @@
+{
+    "C_Cpp.default.includePath": [
+        "/opt/homebrew/Cellar/libpq/16.0/include",
+        "/opt/homebrew/Cellar/jansson/2.14/include"
+    ],
+    "files.associations": {
+        "stdio.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}

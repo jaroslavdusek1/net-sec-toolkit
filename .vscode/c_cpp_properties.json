@@ -1,0 +1,20 @@
+{
+    "configurations": [{
+        "name": "Mac",
+        "includePath": [
+            "${workspaceFolder}/**",
+            "/opt/homebrew/Cellar/libpq/16.0/include",
+            "/opt/homebrew/Cellar/jansson/2.14/include",
+            "/opt/homebrew/Cellar/libmicrohttpd/0.9.77/include"
+        ],
+        "defines": [],
+        "macFrameworkPath": [
+            "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        ],
+        "compilerPath": "/usr/bin/clang",
+        "cStandard": "c17",
+        "cppStandard": "c++17",
+        "intelliSenseMode": "macos-clang-arm64"
+    }],
+    "version": 4
+}
