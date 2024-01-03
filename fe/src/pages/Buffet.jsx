@@ -7,9 +7,7 @@ export default function BuffetBinary() {
 
     useEffect(() => {
         const fetchData = async () => {
-            console.log("Calling /buffet API...");
             const response = await handleFiles();
-            console.log("response");
             setFiles(response);
         };
         fetchData();
