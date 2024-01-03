@@ -214,7 +214,6 @@ export default function Term() {
             fn: async function () {
                 try {
                     const response = await handleTerminator('pwd');
-                    console.log("Term.jsx - response", response);
                     return <span style={{ color: 'green' }}>{response}</span>;
                 } catch (error) {
                     console.error('Error when calling handleTerminator:', error);
@@ -227,7 +226,6 @@ export default function Term() {
             fn: async function () {
                 try {
                     const response = await handleTerminator('ls');
-                    console.log("Term.jsx - response", response);
                     return response;
                 } catch (error) {
                     console.error('Error when calling handleTerminator:', error);
