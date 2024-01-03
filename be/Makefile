@@ -1,21 +1,21 @@
-# Překladač
+# Compiler
 CC = gcc
 
-# Přepínače pro kompilátor 
+# Compiler Flags
 CFLAGS = -Wall \
          -I/opt/homebrew/Cellar/libpq/16.0/include \
          -I/opt/homebrew/Cellar/jansson/2.14/include \
          -I/opt/homebrew/Cellar/libmicrohttpd/0.9.77/include
 
-# Knihovny pro odkazování
+# Libraries for Linking
 LIBS = -L/opt/homebrew/Cellar/libpq/16.0/lib -lpq \
        -L/opt/homebrew/Cellar/jansson/2.14/lib -ljansson \
        -L/opt/homebrew/Cellar/libmicrohttpd/0.9.77/lib -lmicrohttpd
 
-# Zdrojové soubory
+# Source Files
 SOURCES = database.c handlers.c main.c server.c utils.c
 
-# Výstupní binární soubor
+# Output Binary File
 TARGET = server
 
 all: $(TARGET)
