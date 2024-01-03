@@ -37,13 +37,7 @@ export default function SSHattack() {
             fn: async function () {
                 try {
                     const args = Array.from(arguments);
-
-                    console.log("args", args);
-
                     const command = `echo ${args[0]} ${args[1]} ${args[2]}`;
-
-                    console.log("Command to be sent:", command);
-
                     const response = await handleEcho(command);
                     return response;
                 } catch (error) {
@@ -56,9 +50,7 @@ export default function SSHattack() {
             description: 'run hydra with the specified options',
             usage: 'hydra <options> <server://service>',
             fn: async function () {
-                const args = Array.from(arguments);
-                console.log("args: -->", ...args);
-        
+                const args = Array.from(arguments); 
                 // Check for the minimum number of arguments needed for hydra
                 if (args.length >= 3) {
                     try {
@@ -73,12 +65,8 @@ export default function SSHattack() {
                             }
                         }
         
-                        console.log("hydra command: -->", hydraCommand);
-        
                         // Call the server endpoint that will execute hydra
                         const response = await handleHashcat(hydraCommand);
-        
-                        console.log("response", response);
                         return response;
                     } catch (error) {
                         return `Error: ${error.message}`;
@@ -93,7 +81,6 @@ export default function SSHattack() {
             fn: async function () {
                 try {
                     const response = await handleTerminator('ls');
-                    console.log("Term.jsx - response", response);
                     return response;
                 } catch (error) {
                     console.error('Error when calling handleTerminator:', error);
@@ -107,11 +94,7 @@ export default function SSHattack() {
             usage: 'nc <ip> <port>',
             fn: async function () {
                 const args = Array.from(arguments);
-
-                console.log(args[0]);
-                console.log(args[1]);
-                console.log(args[2]);
-        
+                
                 // Check for the minimum number of arguments needed for nc
                 if (args.length === 3) {
                     try {
@@ -120,14 +103,10 @@ export default function SSHattack() {
                         const port = args[2]; // The port number
                         const ncCommand = `nc ${args[0]} ${ip} ${port}`;
         
-                        console.log("nc command: -->", ncCommand);
-        
                         // Call the server endpoint that will execute nc
                         // const response = await handleHashcat(ncCommand);
                         // const response = await handleTerminator(ncCommand);
                         const response = await handleNetcat(ncCommand);
-        
-                        console.log("response", response);
                         return response;
                     } catch (error) {
                         return `Error: ${error.message}`;
@@ -165,8 +144,6 @@ export default function SSHattack() {
                     }
                     const filename = args[0];
                     const command = `rm ${filename}`;
-
-                    console.log("Command to be sent:", command);
 
                     // Assuming you have a general purpose function to handle shell commands
                     const response = await handleTerminator(command);
