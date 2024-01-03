@@ -19,7 +19,7 @@ const AppExplanation = () => {
                 !! heads up, this app is just for testing and ethical hacking purposes, best to run it in a lab or virtual machine, i'm not responsible if anyone uses this app and causes any harm !!
             </p>
             <p>
-                hey, this apsssp's a bit of a mix of my interests in pentesting, networking, also security in general and learning C <br />
+                hey, this app's a bit of a mix of my interests in pentesting, networking, also security in general and learning C <br />
                 been diving into these techs for the last year and a half, soaking up what i can from books and stuff i just basically wanted to try it in practice
                 <br /><br />
                 so, for the tech <br />
