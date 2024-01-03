@@ -1,8 +1,4 @@
 import Console from 'react-console-emulator';
-// import { Tops } from '../api/top.ts';
-// import { SIGKILLbaby } from '../api/sigkill.ts';
-// import { useState } from 'react';
-// import LoadingCircle from '../components/Spinner';
 import { handleEcho } from '../api/echoApi';
 import { handleHashcat } from '../api/hashcatApi';
 import { handleTerminator } from '../api/terminatorApi';
@@ -34,13 +30,7 @@ export default function ReverseHash() {
             fn: async function () {
                 try {
                     const args = Array.from(arguments);
-
-                    console.log("args", args);
-
                     const command = `echo ${args[0]} ${args[1]} ${args[2]}`;
-
-                    console.log("Command to be sent:", command);
-
                     const response = await handleEcho(command);
                     return response;
                 } catch (error) {
@@ -54,13 +44,7 @@ export default function ReverseHash() {
             fn: async function () {
                 try {
                     const args = Array.from(arguments);
-
-                    console.log("args", args);
-
                     const command = `echo ${args[0]} ${args[1]} ${args[2]}`;
-
-                    console.log("Command to be sent:", command);
-
                     const response = await handleEcho(command);
                     return response;
                 } catch (error) {
@@ -98,7 +82,6 @@ export default function ReverseHash() {
             fn: async function () {
                 try {
                     const response = await handleTerminator('ls');
-                    console.log("Term.jsx - response", response);
                     return response;
                 } catch (error) {
                     console.error('Error when calling handleTerminator:', error);
@@ -111,7 +94,6 @@ export default function ReverseHash() {
             fn: async function () {
                 try {
                     const response = await handleTerminator('pwd');
-                    console.log("Term.jsx - response", response);
                     return <span style={{ color: 'green' }}>{response}</span>;
                 } catch (error) {
                     console.error('Error when calling handleTerminator:', error);
@@ -130,9 +112,7 @@ export default function ReverseHash() {
                     }
                     const filename = args[0];
                     const command = `rm ${filename}`;
-
-                    console.log("Command to be sent:", command);
-
+                    
                     // Assuming you have a general purpose function to handle shell commands
                     const response = await handleTerminator(command);
                     return response;
