@@ -95,3 +95,99 @@ int delete_data_from_db(int id) {
     PQclear(res);
     return 0;  // success
 }
+
+// void do_exit(PGconn *conn, PGresult *res)
+// {
+//     if (res != NULL)
+//     {
+//         PQclear(res);
+//     }
+
+//     if (conn != NULL)
+//     {
+//         PQfinish(conn);
+//     }
+//     exit(1);
+// }
+
+// void connection_db_test(int _id)
+// {
+//     // DB connect
+//     PGconn *conn = PQconnectdb("user=user1 dbname=DBname host=host1");
+//     PGresult *res = NULL;
+
+//     // Error handling
+//     if (PGstatus(conn) == CONNECTION_BAD)
+//     {
+//         fprintf(stderr, "Connection has failed. %s\n", PQerrorMessage(conn));
+//         do_exit(conn, NULL);
+//     }
+
+//     const char *paramValues[1];
+//     char id_str[12];
+
+//     paramValues[0] = id_str;
+
+//     // Query call
+//     res = PQexecParams(conn, "SELECT * FROM tablename WHERE id = $1", 1, NULL, paramValues, NULL, NULL, 0);
+
+//     if (PQresultStatus(res) != PGRES_TUPLES_OK)
+//     {
+//         printf("No data found.\n");
+//         do_exit(conn, res);
+//     }
+
+//     int rows = PQntuples(res);
+
+//     for (int i = 0; i < rows; i++)
+//     {
+//         printf("%s\n", PQgetvalue(res, i, 0));
+//     }
+
+//     PQclear(res);
+//     PQclear(conn);
+// }
+
+
+// void do_exit(PGconn *conn, PGresult *res) {
+//     if (res != NULL) {
+//         PQclear(res);
+//     }
+
+//     if (conn != NULL) {
+//         PQfinish(conn);
+//     }
+
+//     exit(1);
+// }
+
+// void connection_db_test(int _id) {
+//     PGconn *conn = PQconnectdb("user=user1 dbname=DBname host=host1");
+//     PGresult *res = NULL;
+
+//     if (PQstatus(conn) == CONNECTION_BAD) {
+//         fprintf(stderr, "Connection has failed %s\n", PQerrorMessage(conn));
+//         do_exit(conn, NULL);
+//     }
+
+//     const char *paramValues[1];
+//     char id_str[12];
+//     snprintf(id_str, sizeof(id_str), "%d", _id);
+//     paramValues[0] = id_str;
+
+//     res = PQexecParams(conn, "SELECT * FROM tablename WHERE id = $1", 1, NULL, paramValues, NULL, NULL, 0);
+
+//     if (PQresultStatus(res) != PGRES_TUPLES_OK) {
+//         printf("No data found.\n");
+//         do_exit(conn, res);
+//     }
+
+//     int rows = PQntuples(res);
+//     for (int i = 0; i < rows; i++) {
+//         printf("%s\n", PQgetvalue(res, i, 0));
+//     }
+
+//     PQclear(res);
+//     PQfinish(conn);
+// }
+
