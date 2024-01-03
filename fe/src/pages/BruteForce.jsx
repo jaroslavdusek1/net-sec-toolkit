@@ -68,7 +68,6 @@ const BruteForceCheck = () => {
     setLoading(true);
     try {
       const response = await dictionaryAttack(password);
-      console.log("response", response);
       setResult(response);
     } catch (error) {
       setResult('An error occurred.');
