@@ -1,6 +1,6 @@
 hey folks, 
 
-welcome to 'nm', where we mix it up with C code for the BE, and TypeScript with React for the FE, i know extraordinary,
+welcome to 'net-set-toolkit', where we mix it up with C code for the BE, and TypeScript with React for the FE, i know extraordinary,
 
 we 're dabbling with Python scripts and a bit of Bash too, 
 
