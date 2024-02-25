@@ -6,6 +6,8 @@ we 're dabbling with Python scripts and a bit of Bash too,
 
 a few features - we 're flooding remote PC with well known DOS attack - SYN floods, cracking hashes in reverse hash feature or remote pc's brute force credentials SSH attacking with tool Hydra, all of these stuff straight from the web-based emulated terminal and more..
 
+![VID_SCREEN](https://github.com/jaroslavdusek1/net-sec-toolkit/blob/main/fe/public/nm.png)
+
 check the SHOWCASE vid
 https://www.youtube.com/watch?v=MPe_9w1EPVQ
 
