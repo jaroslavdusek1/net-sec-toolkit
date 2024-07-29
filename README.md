@@ -1,10 +1,20 @@
 hey folks, 
 
-```plaintext
-welcome to the **Net-Sec-Toolkit** this is where we mix it up with C code for the BE, and TypeScript with React for the FE. and we're getting our hands dirty with Python scripts and a bit of Bash
+welcome to the **Net-Sec-Toolkit** this is where we mix it up with C code for the BE 
+and TypeScript with React for the FE. and we're getting our hands dirty with Python scripts and a bit of Bash
+
+```plaintextA few features:
+- we're flooding remote PCs with well-known DoS attacks like SYN floods
+- cracking hashes with the reverse hash feature
+- brute forcing remote PCs' SSH credentials using Hydra
+- all of these features are accessible straight from the web-based emulated terminal and more
 ```
 
-a few features - we 're flooding remote PC with well known DOS attack - SYN floods, cracking hashes in reverse hash feature or remote pc's brute force credentials SSH attacking with tool Hydra, all of these stuff straight from the web-based emulated terminal and more..
+```plaintextA technology stack:
+- **Backend**: C
+- **Frontend**: TypeScript, React
+- **Scripting**: Python, Bash
+```
 
 ![VID_SCREEN](https://github.com/jaroslavdusek1/net-sec-toolkit/blob/main/fe/public/nm.png)
 
