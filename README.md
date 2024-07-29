@@ -9,11 +9,10 @@ few features:
 - brute forcing remote PCs' SSH credentials using Hydra
 - all of these features are accessible straight from the web-based emulated terminal and more
 
-```plaintextA technology stack:
+tech stack:
 - **Backend**: C
 - **Frontend**: TypeScript, React
 - **Scripting**: Python, Bash
-```
 
 ![VID_SCREEN](https://github.com/jaroslavdusek1/net-sec-toolkit/blob/main/fe/public/nm.png)
 
