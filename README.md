@@ -1,8 +1,8 @@
 hey folks, 
 
-welcome to 'net-sec-toolkit', where we mix it up with C code for the BE, and TypeScript with React for the FE, i know extraordinary,
-
-we 're dabbling with Python scripts and a bit of Bash too, 
+```plaintext
+welcome to the **Net-Sec-Toolkit** this is where we mix it up with C code for the BE, and TypeScript with React for the FE. and we're getting our hands dirty with Python scripts and a bit of Bash
+```
 
 a few features - we 're flooding remote PC with well known DOS attack - SYN floods, cracking hashes in reverse hash feature or remote pc's brute force credentials SSH attacking with tool Hydra, all of these stuff straight from the web-based emulated terminal and more..
 
